@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="minilib"   extends="struts-default">
+	
+		<action name="liginaction2" 
+		class="minilib.action.liginaction2">
+			<result name="success">/main/main.jsp</result>
+			<result name="error">/main/login.jsp</result>
+		</action>
+		
+		<action name="*manageTitleAction"
+		class="minilib.action.manageTitleAction" method="{1}">
+			<result name="booktype">/book/addbook.jsp</result>
+			<result name="addbook" type="chain">findBookTypemanageTitleAction</result>
+			<result name="querybook">/book/querybookresult.jsp</result>
+		</action> 
+
+	</package>
+</struts>

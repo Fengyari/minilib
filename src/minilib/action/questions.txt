@@ -1,0 +1,8 @@
+1.按作者名查询时“郑伟民”的bookid显示不出，应为1.
+-->vo.title中bookid类型错误，改为int型。
+-->关键错误：dao.里返回list里没有包括title.setBookid(rs.getint(1))
+
+//12-8，基本查询与插入已做好，今日计划做好user部分。
+
+
+user插入成功，原因在与外键的限制
